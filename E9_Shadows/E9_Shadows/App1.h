@@ -7,6 +7,7 @@
 #include "TextureShader.h"
 #include "ShadowShader.h"
 #include "DepthShader.h"
+#include "LightShader.h"
 
 class App1 : public BaseApplication
 {
@@ -27,13 +28,20 @@ protected:
 private:
 	TextureShader* textureShader;
 	PlaneMesh* mesh;
+	//SphereMesh* mesh2;
+	//CubeMesh* mesh3;
 
 	Light* light;
+	Light* light2;
 	AModel* model;
 	ShadowShader* shadowShader;
 	DepthShader* depthShader;
+	LightShader* lightShader;
+
+	float rotation = 0.1f;
 
 	ShadowMap* shadowMap;
+	ShadowMap* shadowMap2;
 };
 
 #endif
